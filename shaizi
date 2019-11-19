@@ -1,0 +1,26 @@
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var one: UIImageView!
+    
+    @IBOutlet weak var two: UIImageView!
+    @IBAction func run(_ sender: UIButton) {
+        let random1 = Int.random(in:1...6)
+        let random2 = Int.random(in:1...6)
+        one.image = UIImage(named:"Image-\(random1)")
+        two.image = UIImage(named:"Image-\(random2)")
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        let random1 = Int.random(in:1...6)
+        let random2 = Int.random(in:1...6)
+        one.image = UIImage(named:"Image-\(random1)")
+        two.image = UIImage(named:"Image-\(random2)")
+    }
+
+}
+
